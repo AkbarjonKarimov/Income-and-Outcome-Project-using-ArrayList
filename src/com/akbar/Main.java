@@ -1,4 +1,4 @@
-package com.company;
+package com.akbar;
 
 import java.io.FileWriter;
 import java.util.List;
@@ -84,9 +84,9 @@ public class Main {
 
     }
 
-    public static void addOutComeList(){
+    public static void addOutComeList() {
         System.out.println("Please enter the OutComeList Description and Price");
-        outComeList.addOutComeList(scanner.nextLine(),scanner.nextDouble());
+        outComeList.addOutComeList(scanner.nextLine(), scanner.nextDouble());
     }
 
     public static void modifyIncomeList() {
@@ -97,12 +97,12 @@ public class Main {
         incomeList.modifyIncomeList(id, scanner.nextLine(), scanner.nextDouble());
     }
 
-    public static void modifyOutComeList(){
+    public static void modifyOutComeList() {
         System.out.println("Enter item id : ");
         int id = scanner.nextInt();
         System.out.println("Enter replacement OutComeList description and price");
         scanner = new Scanner(System.in);
-        incomeList.modifyIncomeList(id,scanner.nextLine(),scanner.nextInt());
+        outComeList.modifyOutComeList(id, scanner.nextLine(), scanner.nextInt());
     }
 
     public static void removeIncomeList() {
@@ -110,7 +110,7 @@ public class Main {
         incomeList.removeIncomeList(scanner.nextInt());
     }
 
-    public static void removeOutComeList(){
+    public static void removeOutComeList() {
         System.out.println("Enter id number : ");
         outComeList.removeOutComeList(scanner.nextInt());
     }
@@ -122,7 +122,7 @@ public class Main {
         incomeList.printIncomeList(resultList);
     }
 
-    public static void findOutComeList(){
+    public static void findOutComeList() {
         System.out.println("Enter date (dd.MM.yy)");
         String date = scanner.nextLine();
         List<Model> resultList = outComeList.find(date);
